@@ -13,10 +13,13 @@ install.packages(c("tidyverse", "optmatch", "blocktools", "designmatch", "RItool
 ## blockTools
 
 ## Get tinytex working for our reports
-tinytex::install_tinytex()
-tinytex:::install_yihui_pkgs()
+### To install the most LaTeX packages
+tinytex::install_tinytex(bundle = 'TinyTeX-2')
+## To install fewer:
+## tinytex::install_tinytex()
+## tinytex:::install_yihui_pkgs()
 
-## Test tinytex
+## Test tinytex in the most basic way.
 writeLines(c(
   "\\documentclass{article}",
   "\\begin{document}", "Hello world!", "\\end{document}"
